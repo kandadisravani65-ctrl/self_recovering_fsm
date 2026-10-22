@@ -13,3 +13,6 @@ sim/*.out
 # Compiled simulation executables
 sim/fsm_check
 sim/fsm_tb
+
+# Generated waveform output
+waveforms/*.vcd
