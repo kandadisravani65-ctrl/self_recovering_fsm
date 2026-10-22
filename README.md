@@ -78,4 +78,12 @@ These results are educational estimates, not signoff timing results. The analysi
 - Improve timing constraints and validation.
 - Publish simulation waveforms and reports with the project.
 
+## Hold-Timing Experiments
 
+Additional experimental netlists were created to investigate the hold-time violations by inserting buffer cells into selected data paths.
+
+- **One-buffer experiment:** Improved hold slack, but violations remained in the fast and typical corners.
+- **Two-buffer experiment:** Improved the reported hold slack further, but a fast-corner violation remained.
+- **Three-buffer experiment:** The fast-corner hold slack remained negative at -0.03 ns, while the typical and slow corners passed in the reported analysis.
+
+These experiments are exploratory manual netlist modifications, not a completed timing-repair implementation. The original synthesized netlist and its timing results remain the primary project baseline. Further work is needed to resolve hold timing across all corners and validate the final implementation.
