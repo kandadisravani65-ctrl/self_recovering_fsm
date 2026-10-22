@@ -1,0 +1,15 @@
+# Temporary and backup files
+*~
+*.swp
+*.bak
+
+# Simulation and waveform build outputs
+sim/*.vvp
+sim/*.out
+
+# Operating-system files
+.DS_Store
+
+# Compiled simulation executables
+sim/fsm_check
+sim/fsm_tb

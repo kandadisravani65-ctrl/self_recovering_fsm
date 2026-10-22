@@ -1,0 +1,67 @@
+OpenSTA 2.4.0 ac3479bc24 Copyright (c) 2021, Parallax Software, Inc.
+License GPLv3: GNU GPL version 3 <http://gnu.org/licenses/gpl.html>
+
+This is free software, and you are free to change and redistribute it
+under certain conditions; type `show_copying' for details. 
+This program comes with ABSOLUTELY NO WARRANTY; for details type `show_warranty'.
+Warning: There is 1 input port missing set_input_delay.
+Startpoint: _10_ (rising edge-triggered flip-flop clocked by core_clk)
+Endpoint: recovery_flag (output port clocked by core_clk)
+Path Group: core_clk
+Path Type: max
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00   clock core_clk (rise edge)
+   0.00    0.00   clock network delay (ideal)
+   0.00    0.00 ^ _10_/CK (DFFR_X1)
+   0.37    0.37 ^ _10_/Q (DFFR_X1)
+   0.04    0.40 v _05_/ZN (NOR2_X1)
+   0.13    0.54 ^ _07_/ZN (NOR3_X1)
+   0.00    0.54 ^ recovery_flag (out)
+           0.54   data arrival time
+
+  10.00   10.00   clock core_clk (rise edge)
+   0.00   10.00   clock network delay (ideal)
+  -0.10    9.90   clock uncertainty
+   0.00    9.90   clock reconvergence pessimism
+  -1.00    8.90   output external delay
+           8.90   data required time
+---------------------------------------------------------
+           8.90   data required time
+          -0.54   data arrival time
+---------------------------------------------------------
+           8.36   slack (MET)
+
+
+Startpoint: _09_ (rising edge-triggered flip-flop clocked by core_clk)
+Endpoint: _10_ (rising edge-triggered flip-flop clocked by core_clk)
+Path Group: core_clk
+Path Type: min
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00   clock core_clk (rise edge)
+   0.00    0.00   clock network delay (ideal)
+   0.00    0.00 ^ _09_/CK (DFFR_X1)
+   0.21    0.21 ^ _09_/QN (DFFR_X1)
+   0.03    0.24 v _08_/ZN (NOR2_X1)
+   0.00    0.24 v _10_/D (DFFR_X1)
+           0.24   data arrival time
+
+   0.00    0.00   clock core_clk (rise edge)
+   0.00    0.00   clock network delay (ideal)
+   0.10    0.10   clock uncertainty
+   0.00    0.10   clock reconvergence pessimism
+           0.10 ^ _10_/CK (DFFR_X1)
+   0.00    0.10   library hold time
+           0.10   data required time
+---------------------------------------------------------
+           0.10   data required time
+          -0.24   data arrival time
+---------------------------------------------------------
+           0.14   slack (MET)
+
+
+worst slack 8.36
+tns 0.00

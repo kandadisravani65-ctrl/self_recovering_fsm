@@ -1,0 +1,19 @@
+read_liberty -lib /home/vsduser/Desktop/OpenSTA/examples/nangate45_typ.lib
+
+read_verilog rtl/self_recovering_fsm.v
+hierarchy -check -top self_recovering_fsm
+
+proc
+opt
+check
+
+synth -top self_recovering_fsm -noabc
+
+dfflibmap -liberty /home/vsduser/Desktop/OpenSTA/examples/nangate45_typ.lib
+abc -liberty /home/vsduser/Desktop/OpenSTA/examples/nangate45_typ.lib
+
+clean
+check
+stat -liberty /home/vsduser/Desktop/OpenSTA/examples/nangate45_typ.lib
+
+write_verilog -noattr synth/self_recovering_fsm_netlist.v
