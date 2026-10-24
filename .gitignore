@@ -1,0 +1,6 @@
+*.swp
+*.swo
+*.vvp
+*.out
+*.log
+simulation/self_recovering_fsm_sim
