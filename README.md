@@ -87,3 +87,5 @@ Additional experimental netlists were created to investigate the hold-time viola
 - **Three-buffer experiment:** The fast-corner hold slack remained negative at -0.03 ns, while the typical and slow corners passed in the reported analysis.
 
 These experiments are exploratory manual netlist modifications, not a completed timing-repair implementation. The original synthesized netlist and its timing results remain the primary project baseline. Further work is needed to resolve hold timing across all corners and validate the final implementation.
+
+## project video : https://1drv.ms/v/c/30a2775857c1046c/IQAfo1eaSynORopsS8iuzHENAbyrYKv-oQK_CckHC0bn1OU?e=D6cPzC
